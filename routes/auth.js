@@ -3,7 +3,7 @@ const { signUp  , signIn} = require("../controllers/auth");
 const router= express.Router();
 
 router.post("/signup", signUp)
-router.post("/signip", signIn);
+router.post("/signin", signIn);
 
 //Middleware
 module.exports=router;
