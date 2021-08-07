@@ -48,9 +48,7 @@ exports.signUp = (req, res) => {
           };
 
           client
-            .query(
-              `INSERT INTO users (name, email, password) VALUES ('${user.name}', '${user.email}' , '${user.password}');`
-            )
+            .query(`INSERT INTO users (name, email, password) VALUES ('${user.name}', '${user.email}' , '${user.password}');`)
             .then((data) => {
               const token = jwt.sign(
                 {
@@ -74,7 +72,7 @@ exports.signUp = (req, res) => {
     })
     .catch((err) => {
       res.status(500).json({
-        error: "Database error occurred!",
+        error: "Database error occurred!!!",
       });
     });
 };
